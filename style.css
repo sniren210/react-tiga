@@ -1,0 +1,88 @@
+*{
+    margin: 0;;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #251801;
+    cursor: url('logo.png');
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.container .face{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #ffcd00;
+    margin: 0 50px;
+}
+
+.container .face:hover{
+    background: linear-gradient(180deg,#f44336,#ffcd00);
+}
+
+.container .face .mount{
+    position: absolute;
+    top: 230px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    background-color: #b57700;
+    width: 150px;
+    height: 70px;
+    transition: .5s;
+}
+
+.container .face:hover .mount{
+    width: 150px;
+    height: 20px;
+    top: 240px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #9d0b00;
+}
+
+.container .face .eyes{
+    position: relative;
+    top: -40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .face .eyes .eye{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 15px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.container .face .eyes .eye::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50%;
+}
